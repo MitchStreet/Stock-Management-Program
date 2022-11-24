@@ -35,6 +35,10 @@ With the selected serial number, the user can: allocate it to a customer and all
 
 ## Installation
 
+### Requirements:
+[**.NET Desktop Runtime**](https://download.visualstudio.microsoft.com/download/pr/0192a249-3ec8-4374-a827-e186dd58d55d/cec046575f3eb2247a10ba3d50f5cf6c/windowsdesktop-runtime-6.0.11-win-x64.exe ".NET Desktop Runtime") is required to run this application.
+
+
 After downloading the .zip and extracting the file, to run the program for the first time navigate to the following file:
 
 ```bash
