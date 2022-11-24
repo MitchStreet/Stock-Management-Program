@@ -1,0 +1,28 @@
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\Stock Management Program.exe
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\Stock Management Program.deps.json
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\Stock Management Program.runtimeconfig.json
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\Stock Management Program.dll
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\Stock Management Program.pdb
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.csproj.AssemblyReference.cache
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.landingpage.resources
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.managestock.resources
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.scanstock.resources
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.csproj.GenerateResource.cache
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.AssemblyInfoInputs.cache
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.AssemblyInfo.cs
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.csproj.CoreCompileInputs.cache
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.dll
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\refint\Stock Management Program.dll
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.pdb
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.genruntimeconfig.cache
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\ref\Stock Management Program.dll
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.addnewcat.resources
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.addtocat.resources
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.settings.resources
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.Properties.Resources.resources
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\CsvHelper.dll
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.csproj.CopyComplete
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.managecategories.resources
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Interop.IWshRuntimeLibrary.dll
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\Stock Management Program.csproj.ResolveComReference.cache

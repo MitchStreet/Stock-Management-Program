@@ -1,0 +1,19 @@
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\The Christie NHS - Stock control program.exe
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\The Christie NHS - Stock control program.deps.json
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\The Christie NHS - Stock control program.runtimeconfig.json
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\The Christie NHS - Stock control program.dll
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\bin\Debug\net6.0-windows\The Christie NHS - Stock control program.pdb
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The Christie NHS - Stock control program.csproj.AssemblyReference.cache
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The Christie NHS - Stock control program.csproj.GenerateResource.cache
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The Christie NHS - Stock control program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The Christie NHS - Stock control program.AssemblyInfoInputs.cache
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The Christie NHS - Stock control program.AssemblyInfo.cs
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The Christie NHS - Stock control program.csproj.CoreCompileInputs.cache
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The Christie NHS - Stock control program.dll
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\refint\The Christie NHS - Stock control program.dll
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The Christie NHS - Stock control program.pdb
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The Christie NHS - Stock control program.genruntimeconfig.cache
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\ref\The Christie NHS - Stock control program.dll
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.landingpage.resources
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.scanstock.resources
+C:\Users\Mitchell\Dropbox\Documents\GitHub\The Christie NHS - Stock control\obj\Debug\net6.0-windows\The_Christie_NHS___Stock_control_program.managestock.resources

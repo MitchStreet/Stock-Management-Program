@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VOB5EhahpBruGAE9X+3QHaYMkyR9USVFh4Z8Nz0or5hGH44L/Cr7AyKxVDYJpEBfE7c7/FfBBN1sIKJZT+303w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mitchell\\Dropbox\\Documents\\GitHub\\The Christie NHS - Stock control\\Stock Management Program.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mitchell\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
