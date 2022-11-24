@@ -32,6 +32,17 @@ The program then needs to validate if the barcode already exists in the selected
 -	User can select serial number from list
 With the selected serial number, the user can: allocate it to a customer and allow them to assign a order number to it or revert the serial number from being allocated to regular old ‘stocked’ and remove the assigned order number.
 
+
+## Installation
+
+After downloading the .zip and extracting the file, to run the program for the first time navigate to the following file:
+
+```bash
+  <Download location>\Stock Management Program\bin\Debug\net6.0-windows\Stock Management Program.exe
+```
+
+Running this .exe will load up the program for the first time, the option to **make a shortcut to open the program** is available in the settings page as the top-right option.
+
 ## 📷 Usage and Screenshots 📷
 
 ### Single serial number scan in
