@@ -38,14 +38,19 @@ With the selected serial number, the user can: allocate it to a customer and all
 ### Requirements:
 [**.NET Desktop Runtime**](https://download.visualstudio.microsoft.com/download/pr/0192a249-3ec8-4374-a827-e186dd58d55d/cec046575f3eb2247a10ba3d50f5cf6c/windowsdesktop-runtime-6.0.11-win-x64.exe ".NET Desktop Runtime") is required to run this application.
 
+![Installation gif](https://github.com/MitchStreet/Stock-Management-Program/blob/main/install%20tutorial.gif?raw=true)
 
-After downloading the .zip and extracting the file, to run the program for the first time navigate to the following file:
+After downloading the .zip from the latest release and extracting the file, to run the program for the first time navigate to the following file:
 
 ```bash
   <Download location>\Stock Management Program\bin\Debug\net6.0-windows\Stock Management Program.exe
 ```
 
 Running this .exe will load up the program for the first time, the option to **make a shortcut to open the program** is available in the settings page as the top-right option.
+
+## Updates
+
+Updating the software on a new release is as easy as replacing your current file with the new file. As the file structure will remain the same, your shortcut should still workas long as the location of the folder doesn't change.
 
 ## 📷 Usage and Screenshots 📷
 
@@ -71,7 +76,7 @@ The 'Alt key' option makes it so the 'Enter' or 'Return' key presses the submit 
 
 ## Utilised by:
 
-This software is used by
+This software is used by:
 
 - The Christie NHS Trust
 
