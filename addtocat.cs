@@ -105,6 +105,8 @@ namespace The_Christie_NHS___Stock_control_program
                 bulkmodecheckbox.Enabled = true;
                 altkeyenter.Enabled = true;
 
+                bulkmodecheckbox.Checked = false;
+
                 // Change label colours
                 label6.ForeColor = SystemColors.Highlight;
                 label5.ForeColor = SystemColors.Highlight;
@@ -113,7 +115,6 @@ namespace The_Christie_NHS___Stock_control_program
                 label9.ForeColor = SystemColors.Highlight;
                 label10.ForeColor = SystemColors.Highlight;
                 label7.ForeColor = SystemColors.Highlight;
-                
             }
         }
 

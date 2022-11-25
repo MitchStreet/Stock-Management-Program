@@ -164,6 +164,10 @@ namespace The_Christie_NHS___Stock_control_program
                 // Delete csv file
                 File.Delete(@$"{directory_path}\{selected_catagory.ToString()}.csv");
 
+                // Delete message
+                statusmessage.Text = "Category deleted";
+                statusmessage.ForeColor = Color.Red;
+
                 // Delete selected line from text box
                 csvlistbox.Items.Remove(csvlistbox.SelectedItem);
 
@@ -240,7 +244,11 @@ namespace The_Christie_NHS___Stock_control_program
 
             // Clear csvlistbox
             csvlistbox.Items.Clear();
-            
+
+            // Save message
+            statusmessage.Text = "Changes Saved";
+            statusmessage.ForeColor = Color.Green;
+
             // Clear boxes
             catagory_name_box.Text = "";
             category_name_box.Text = "";

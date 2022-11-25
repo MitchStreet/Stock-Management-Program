@@ -54,6 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.quantity_count = new System.Windows.Forms.Label();
             this.dateedited = new System.Windows.Forms.Label();
+            this.statusmessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -349,11 +350,20 @@
             this.dateedited.Text = "Last updated: dd/MM/yyyy HH:mm:ss";
             this.dateedited.Click += new System.EventHandler(this.dateedited_Click);
             // 
+            // statusmessage
+            // 
+            this.statusmessage.Location = new System.Drawing.Point(514, 9);
+            this.statusmessage.Name = "statusmessage";
+            this.statusmessage.Size = new System.Drawing.Size(274, 23);
+            this.statusmessage.TabIndex = 30;
+            this.statusmessage.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // managestock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.statusmessage);
             this.Controls.Add(this.dateedited);
             this.Controls.Add(this.quantity_count);
             this.Controls.Add(this.label8);
@@ -421,5 +431,6 @@
         private Label label8;
         private Label quantity_count;
         private Label dateedited;
+        private Label statusmessage;
     }
 }

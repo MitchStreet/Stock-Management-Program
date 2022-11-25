@@ -372,6 +372,10 @@ namespace The_Christie_NHS___Stock_control_program
             // Write new line with updated information
             System.IO.File.AppendAllText(@$"{directory_path}\{selected_catagory}.csv", selectedserialtextbox.Text + "," + assignedorstocked + "," + ticketnumberbox.Text + "," + ordernumberbox.Text + "," + commentbox.Text + "," + dateandtime + "," + Environment.NewLine);
 
+            // Save message
+            statusmessage.Text = "Changes Saved";
+            statusmessage.ForeColor = Color.Green;
+
             // Press select button
             selectcatagorybutton.PerformClick();
         }
@@ -424,8 +428,12 @@ namespace The_Christie_NHS___Stock_control_program
                 // Delete selected line from text box
                 serialnumlistbox.Items.Remove(serialnumlistbox.SelectedItem);
 
-                // Clear selected catagories box
-                catagory_name_box.Text = "";
+                // Delete message
+                statusmessage.Text = "Serial number deleted";
+                statusmessage.ForeColor = Color.Red;
+
+                // Clear selected serial number box
+                selectedserialtextbox.Text = "";
 
             }
 

@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.save_button = new System.Windows.Forms.Button();
+            this.statusmessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // csvlistbox
@@ -211,11 +212,20 @@
             this.save_button.UseVisualStyleBackColor = true;
             this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
+            // statusmessage
+            // 
+            this.statusmessage.Location = new System.Drawing.Point(532, 9);
+            this.statusmessage.Name = "statusmessage";
+            this.statusmessage.Size = new System.Drawing.Size(256, 23);
+            this.statusmessage.TabIndex = 16;
+            this.statusmessage.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // managecategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.statusmessage);
             this.Controls.Add(this.save_button);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -237,7 +247,7 @@
             this.MaximizeBox = false;
             this.Name = "managecategories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "managecategories";
+            this.Text = "Stock Management System";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +271,6 @@
         private Label label5;
         private Label label6;
         private Button save_button;
+        private Label statusmessage;
     }
 }
