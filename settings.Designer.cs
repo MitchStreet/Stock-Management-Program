@@ -55,6 +55,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.programlocation = new System.Windows.Forms.FolderBrowserDialog();
             this.statusmessage = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.version_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -313,11 +315,34 @@
             this.statusmessage.TabIndex = 25;
             this.statusmessage.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(724, 210);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 21);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Version";
+            // 
+            // version_label
+            // 
+            this.version_label.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.version_label.Location = new System.Drawing.Point(534, 231);
+            this.version_label.Name = "version_label";
+            this.version_label.Size = new System.Drawing.Size(254, 43);
+            this.version_label.TabIndex = 27;
+            this.version_label.Text = "Current version:\r\nv.1.0.1\r\n";
+            this.version_label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.version_label.Click += new System.EventHandler(this.version_label_Click);
+            // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.version_label);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.statusmessage);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -380,5 +405,7 @@
         private Label label11;
         private FolderBrowserDialog programlocation;
         private Label statusmessage;
+        private Label label12;
+        private Label version_label;
     }
 }

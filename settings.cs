@@ -247,6 +247,17 @@ namespace The_Christie_NHS___Stock_control_program
 
         private void programlocation_HelpRequest(object sender, EventArgs e)
         {
+            // Check if url is valid
+            
+        }
+
+        private void getlatestversionbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void version_label_Click(object sender, EventArgs e)
+        {
 
         }
     }
