@@ -150,6 +150,9 @@ namespace The_Christie_NHS___Stock_control_program
                 string count = serialnumlistbox.Items.Count.ToString();
                 // Display quantity count
                 quantity_count.Text = count.ToString();
+
+                // Enable selected serial num box
+                selectedserialtextbox.Enabled = true;
             }
         }
 
@@ -345,7 +348,7 @@ namespace The_Christie_NHS___Stock_control_program
 
             // Delete row containing selected category
             string[] lines = System.IO.File.ReadAllLines(csvpath);
-            string[] newlines = lines.Where(line => !line.Contains(serialnumlistbox.SelectedItem.ToString())).ToArray();
+            string[] newlines = lines.Where(line => !line.Contains(selectedserialtextbox.Text.ToString())).ToArray();
             System.IO.File.WriteAllLines(csvpath, newlines);
 
             // Set variable 'dateandtime' to current date and time
@@ -422,7 +425,7 @@ namespace The_Christie_NHS___Stock_control_program
 
                 // Delete row containing selected category
                 string[] lines = System.IO.File.ReadAllLines(csvpath);
-                string[] newlines = lines.Where(line => !line.Contains(serialnumlistbox.SelectedItem.ToString())).ToArray();
+                string[] newlines = lines.Where(line => !line.Contains(selectedserialtextbox.Text.ToString())).ToArray();
                 System.IO.File.WriteAllLines(csvpath, newlines);
 
                 // Delete selected line from text box

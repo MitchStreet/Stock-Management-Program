@@ -273,5 +273,10 @@ namespace The_Christie_NHS___Stock_control_program
             // Change load categories button
             load_catagories.Text = "Load categories";
         }
+
+        private void description_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

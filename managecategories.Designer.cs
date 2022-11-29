@@ -166,6 +166,7 @@
             this.description_box.Name = "description_box";
             this.description_box.Size = new System.Drawing.Size(301, 170);
             this.description_box.TabIndex = 11;
+            this.description_box.TextChanged += new System.EventHandler(this.description_box_TextChanged);
             // 
             // label4
             // 
