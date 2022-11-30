@@ -151,6 +151,45 @@ namespace The_Christie_NHS___Stock_control_program
                 // Display quantity count
                 quantity_count.Text = count.ToString();
 
+                // Set unmarkednum to number of lines with "" in 2nd column
+                int unmarkedqty = 0;
+                foreach (string csvline in csvlines)
+                {
+                    string[] csvvalues = csvline.Split(',');
+                    if (csvvalues[1] == "")
+                    {
+                        unmarkedqty++;
+                    }
+                }
+                // Display unmarked count
+                unmarkednum.Text = ($"Unmarked: {unmarkedqty.ToString()}");
+
+                // Set assignednum to number of lines with "Assigned" in 2nd column
+                int assignedqty = 0;
+                foreach (string csvline in csvlines)
+                {
+                    string[] csvvalues = csvline.Split(',');
+                    if (csvvalues[1] == "Assigned")
+                    {
+                        assignedqty++;
+                    }
+                }
+                // Display Assigned count
+                assignednum.Text = ($"Assigned: {assignedqty.ToString()}");
+
+                // Set stockednum to number of lines with "Stocked" in 2nd column
+                int stockedqty = 0;
+                foreach (string csvline in csvlines)
+                {
+                    string[] csvvalues = csvline.Split(',');
+                    if (csvvalues[1] == "Stocked")
+                    {
+                        stockedqty++;
+                    }
+                }
+                // Display Stocked count
+                stockednum.Text = ($"Stocked: {stockedqty.ToString()}");
+
                 // Enable selected serial num box
                 selectedserialtextbox.Enabled = true;
 
@@ -446,6 +485,41 @@ namespace The_Christie_NHS___Stock_control_program
 
         private void savebutton_Click(object sender, EventArgs e)
         {
+            // If assigned is checked, ticket number is required
+            if (assignedcheckbox.Checked == true)
+            {
+                // If ticket box is empty
+                if (ticketnumberbox.Text == "")
+                {
+                    MessageBox.Show("Ticket number is required.");
+                    return;
+                }
+                else
+                {
+                    
+                }
+            }
+            else
+            {
+            }
+
+            // If stocked is checked, ticket number should be empty
+            if (stockedcheckbox.Checked == true)
+            {
+                // If ticket box is not empty
+                if (ticketnumberbox.Text != "")
+                {
+                    MessageBox.Show("A stocked item shouldn't have a ticket number.");
+                    return;
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+            }
             // Save order number changes
             // Pull directory path from settings
             string directory_path;

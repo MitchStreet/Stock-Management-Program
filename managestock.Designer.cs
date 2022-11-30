@@ -56,6 +56,9 @@
             this.dateedited = new System.Windows.Forms.Label();
             this.statusmessage = new System.Windows.Forms.Label();
             this.deselectserialnumbutton = new System.Windows.Forms.Button();
+            this.assignednum = new System.Windows.Forms.Label();
+            this.stockednum = new System.Windows.Forms.Label();
+            this.unmarkednum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -318,24 +321,24 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label8.Location = new System.Drawing.Point(276, 411);
+            this.label8.Location = new System.Drawing.Point(276, 409);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 21);
+            this.label8.Size = new System.Drawing.Size(59, 17);
             this.label8.TabIndex = 27;
             this.label8.Text = "Quantity:";
             // 
             // quantity_count
             // 
             this.quantity_count.AutoSize = true;
-            this.quantity_count.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.quantity_count.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.quantity_count.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.quantity_count.Location = new System.Drawing.Point(346, 411);
+            this.quantity_count.Location = new System.Drawing.Point(337, 409);
             this.quantity_count.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.quantity_count.Name = "quantity_count";
-            this.quantity_count.Size = new System.Drawing.Size(0, 21);
+            this.quantity_count.Size = new System.Drawing.Size(0, 17);
             this.quantity_count.TabIndex = 28;
             // 
             // dateedited
@@ -370,11 +373,44 @@
             this.deselectserialnumbutton.UseVisualStyleBackColor = true;
             this.deselectserialnumbutton.Click += new System.EventHandler(this.deselectserialnumbutton_Click);
             // 
+            // assignednum
+            // 
+            this.assignednum.AutoSize = true;
+            this.assignednum.ForeColor = System.Drawing.Color.SandyBrown;
+            this.assignednum.Location = new System.Drawing.Point(276, 432);
+            this.assignednum.Name = "assignednum";
+            this.assignednum.Size = new System.Drawing.Size(61, 15);
+            this.assignednum.TabIndex = 32;
+            this.assignednum.Text = "Assigned: ";
+            // 
+            // stockednum
+            // 
+            this.stockednum.AutoSize = true;
+            this.stockednum.ForeColor = System.Drawing.Color.YellowGreen;
+            this.stockednum.Location = new System.Drawing.Point(391, 432);
+            this.stockednum.Name = "stockednum";
+            this.stockednum.Size = new System.Drawing.Size(52, 15);
+            this.stockednum.TabIndex = 33;
+            this.stockednum.Text = "Stocked:";
+            // 
+            // unmarkednum
+            // 
+            this.unmarkednum.AutoSize = true;
+            this.unmarkednum.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.unmarkednum.Location = new System.Drawing.Point(391, 411);
+            this.unmarkednum.Name = "unmarkednum";
+            this.unmarkednum.Size = new System.Drawing.Size(65, 15);
+            this.unmarkednum.TabIndex = 34;
+            this.unmarkednum.Text = "Unmarked:";
+            // 
             // managestock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.unmarkednum);
+            this.Controls.Add(this.stockednum);
+            this.Controls.Add(this.assignednum);
             this.Controls.Add(this.deselectserialnumbutton);
             this.Controls.Add(this.statusmessage);
             this.Controls.Add(this.dateedited);
@@ -446,5 +482,8 @@
         private Label dateedited;
         private Label statusmessage;
         private Button deselectserialnumbutton;
+        private Label assignednum;
+        private Label stockednum;
+        private Label unmarkednum;
     }
 }
