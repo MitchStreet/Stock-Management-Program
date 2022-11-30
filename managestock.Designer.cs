@@ -55,6 +55,7 @@
             this.quantity_count = new System.Windows.Forms.Label();
             this.dateedited = new System.Windows.Forms.Label();
             this.statusmessage = new System.Windows.Forms.Label();
+            this.deselectserialnumbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -358,11 +359,23 @@
             this.statusmessage.TabIndex = 30;
             this.statusmessage.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // deselectserialnumbutton
+            // 
+            this.deselectserialnumbutton.Enabled = false;
+            this.deselectserialnumbutton.Location = new System.Drawing.Point(514, 415);
+            this.deselectserialnumbutton.Name = "deselectserialnumbutton";
+            this.deselectserialnumbutton.Size = new System.Drawing.Size(171, 23);
+            this.deselectserialnumbutton.TabIndex = 31;
+            this.deselectserialnumbutton.Text = "Deselect Serial Number";
+            this.deselectserialnumbutton.UseVisualStyleBackColor = true;
+            this.deselectserialnumbutton.Click += new System.EventHandler(this.deselectserialnumbutton_Click);
+            // 
             // managestock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.deselectserialnumbutton);
             this.Controls.Add(this.statusmessage);
             this.Controls.Add(this.dateedited);
             this.Controls.Add(this.quantity_count);
@@ -432,5 +445,6 @@
         private Label quantity_count;
         private Label dateedited;
         private Label statusmessage;
+        private Button deselectserialnumbutton;
     }
 }

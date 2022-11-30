@@ -153,6 +153,9 @@ namespace The_Christie_NHS___Stock_control_program
 
                 // Enable selected serial num box
                 selectedserialtextbox.Enabled = true;
+
+                // Enable serialnumlistbox
+                serialnumlistbox.Enabled = true;
             }
         }
 
@@ -164,101 +167,211 @@ namespace The_Christie_NHS___Stock_control_program
         // Select serial number button
         private void button1_Click(object sender, EventArgs e)
         {
-            if (serialnumlistbox.SelectedIndex == -1)
+            if (selectedserialtextbox.Text == "")
             {
-                MessageBox.Show("Please select a serial number.");
+                if (serialnumlistbox.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select a serial number.");
+                }
+                else
+                {
+                    // Disable serialnumlistbox
+                    serialnumlistbox.Enabled = false;
+
+                    // Set 'selectedserialtextbox' to 'serialnumlistbox' selection
+                    selectedserialtextbox.Text = serialnumlistbox.SelectedItem.ToString();
+
+                    // Pull directory path from settings
+                    string directory_path;
+                    using (var streamReader = new StreamReader(@"database_dir.txt", Encoding.UTF8))
+                    {
+                        directory_path = streamReader.ReadToEnd();
+                    }
+
+                    // Select row 1, column 2 of csv file
+                    // Select catagory selected to show serial numbers
+                    string selected_catagory = catagory_name_box.Text.Replace(" ", string.Empty);
+
+                    // Open csv file
+                    string csvpath = (@$"{directory_path}\{selected_catagory}.csv");
+                    string[] csvlines = System.IO.File.ReadAllLines(csvpath);
+
+                    // Display 1st column of csv in textbox
+                    foreach (string csvline in csvlines)
+                    {
+                        string[] csvvalues = csvline.Split(',');
+                        if (csvvalues[0] == selectedserialtextbox.Text)
+                        {
+                            // Order number box
+                            if (csvvalues[3] != "")
+                            {
+                                ordernumberbox.Text = csvvalues[3];
+                            }
+                            else
+                            {
+                                ordernumberbox.Text = "";
+                            }
+                            // Ticket number box
+                            if (csvvalues[2] != "")
+                            {
+                                ticketnumberbox.Text = csvvalues[2];
+                            }
+                            else
+                            {
+                                ticketnumberbox.Text = "";
+                            }
+                            // Comment box
+                            if (csvvalues[4] != "")
+                            {
+                                commentbox.Text = csvvalues[4];
+                            }
+                            else
+                            {
+                                commentbox.Text = "";
+                            }
+                            // Assigned checkbox
+                            if (csvvalues[1] == "Stocked")
+                            {
+                                stockedcheckbox.Checked = true;
+                                assignedcheckbox.Checked = false;
+                            }
+                            else if (csvvalues[1] == "Assigned")
+                            {
+                                stockedcheckbox.Checked = false;
+                                assignedcheckbox.Checked = true;
+                            }
+                            else
+                            {
+                                stockedcheckbox.Checked = false;
+                                assignedcheckbox.Checked = false;
+                            }
+                            // Date and time label
+                            dateedited.Text = ($"Last edited: {csvvalues[5]}");
+                        }
+                    }
+
+                    // Enable text boxes
+                    ordernumberbox.Enabled = true;
+                    ticketnumberbox.Enabled = true;
+                    commentbox.Enabled = true;
+                    // Enabled checkboxes
+                    assignedcheckbox.Enabled = true;
+                    stockedcheckbox.Enabled = true;
+                    // Enable buttons
+                    delete_button.Enabled = true;
+                    savebutton.Enabled = true;
+                    // Enable labels
+                    label4.ForeColor = SystemColors.ControlText;
+                    label5.ForeColor = SystemColors.ControlText;
+                    label6.ForeColor = SystemColors.ControlText;
+                    label7.ForeColor = SystemColors.ControlText;
+                    dateedited.ForeColor = SystemColors.ControlText;
+
+                    // Enable deselect button
+                    deselectserialnumbutton.Enabled = true;
+
+                }
             }
             else
             {
-                // Set 'selectedserialtextbox' to 'serialnumlistbox' selection
-                selectedserialtextbox.Text = serialnumlistbox.SelectedItem.ToString();
-
-                // Pull directory path from settings
-                string directory_path;
-                using (var streamReader = new StreamReader(@"database_dir.txt", Encoding.UTF8))
+                if (serialnumlistbox.Items.Contains(selectedserialtextbox.Text.ToString()))
                 {
-                    directory_path = streamReader.ReadToEnd();
-                }
+                    // Disable serialnumlistbox
+                    serialnumlistbox.Enabled = false;
 
-                // Select row 1, column 2 of csv file
-                // Select catagory selected to show serial numbers
-                string selected_catagory = catagory_name_box.Text.Replace(" ", string.Empty);
-
-                // Open csv file
-                string csvpath = (@$"{directory_path}\{selected_catagory}.csv");
-                string[] csvlines = System.IO.File.ReadAllLines(csvpath);
-
-                // Display 1st column of csv in textbox
-                foreach (string csvline in csvlines)
-                {
-                    string[] csvvalues = csvline.Split(',');
-                    if (csvvalues[0] == selectedserialtextbox.Text)
+                    // Pull directory path from settings
+                    string directory_path;
+                    using (var streamReader = new StreamReader(@"database_dir.txt", Encoding.UTF8))
                     {
-                        // Order number box
-                        if (csvvalues[3] != "")
-                        {
-                            ordernumberbox.Text = csvvalues[3];
-                        }
-                        else
-                        {
-                            ordernumberbox.Text = "";
-                        }
-                        // Ticket number box
-                        if (csvvalues[2] != "")
-                        {
-                            ticketnumberbox.Text = csvvalues[2];
-                        }
-                        else
-                        {
-                            ticketnumberbox.Text = "";
-                        }
-                        // Comment box
-                        if (csvvalues[4] != "")
-                        {
-                            commentbox.Text = csvvalues[4];
-                        }
-                        else
-                        {
-                            commentbox.Text = "";
-                        }
-                        // Assigned checkbox
-                        if (csvvalues[1] == "Stocked")
-                        {
-                            stockedcheckbox.Checked = true;
-                            assignedcheckbox.Checked = false;
-                        }
-                        else if (csvvalues[1] == "Assigned")
-                        {
-                            stockedcheckbox.Checked = false;
-                            assignedcheckbox.Checked = true;
-                        }
-                        else
-                        {
-                            stockedcheckbox.Checked = false;
-                            assignedcheckbox.Checked = false;
-                        }
-                        // Date and time label
-                        dateedited.Text = ($"Last edited: {csvvalues[5]}");
+                        directory_path = streamReader.ReadToEnd();
                     }
+
+                    // Select row 1, column 2 of csv file
+                    // Select catagory selected to show serial numbers
+                    string selected_catagory = catagory_name_box.Text.Replace(" ", string.Empty);
+
+                    // Open csv file
+                    string csvpath = (@$"{directory_path}\{selected_catagory}.csv");
+                    string[] csvlines = System.IO.File.ReadAllLines(csvpath);
+
+                    // Display 1st column of csv in textbox
+                    foreach (string csvline in csvlines)
+                    {
+                        string[] csvvalues = csvline.Split(',');
+                        if (csvvalues[0] == selectedserialtextbox.Text)
+                        {
+                            // Order number box
+                            if (csvvalues[3] != "")
+                            {
+                                ordernumberbox.Text = csvvalues[3];
+                            }
+                            else
+                            {
+                                ordernumberbox.Text = "";
+                            }
+                            // Ticket number box
+                            if (csvvalues[2] != "")
+                            {
+                                ticketnumberbox.Text = csvvalues[2];
+                            }
+                            else
+                            {
+                                ticketnumberbox.Text = "";
+                            }
+                            // Comment box
+                            if (csvvalues[4] != "")
+                            {
+                                commentbox.Text = csvvalues[4];
+                            }
+                            else
+                            {
+                                commentbox.Text = "";
+                            }
+                            // Assigned checkbox
+                            if (csvvalues[1] == "Stocked")
+                            {
+                                stockedcheckbox.Checked = true;
+                                assignedcheckbox.Checked = false;
+                            }
+                            else if (csvvalues[1] == "Assigned")
+                            {
+                                stockedcheckbox.Checked = false;
+                                assignedcheckbox.Checked = true;
+                            }
+                            else
+                            {
+                                stockedcheckbox.Checked = false;
+                                assignedcheckbox.Checked = false;
+                            }
+                            // Date and time label
+                            dateedited.Text = ($"Last edited: {csvvalues[5]}");
+                        }
+                    }
+
+                    // Enable text boxes
+                    ordernumberbox.Enabled = true;
+                    ticketnumberbox.Enabled = true;
+                    commentbox.Enabled = true;
+                    // Enabled checkboxes
+                    assignedcheckbox.Enabled = true;
+                    stockedcheckbox.Enabled = true;
+                    // Enable buttons
+                    delete_button.Enabled = true;
+                    savebutton.Enabled = true;
+                    // Enable labels
+                    label4.ForeColor = SystemColors.ControlText;
+                    label5.ForeColor = SystemColors.ControlText;
+                    label6.ForeColor = SystemColors.ControlText;
+                    label7.ForeColor = SystemColors.ControlText;
+                    dateedited.ForeColor = SystemColors.ControlText;
+
+                    // Enable deselect button
+                    deselectserialnumbutton.Enabled = true;
                 }
-
-                // Enable text boxes
-                ordernumberbox.Enabled = true;
-                ticketnumberbox.Enabled = true;
-                commentbox.Enabled = true;
-                // Enabled checkboxes
-                assignedcheckbox.Enabled = true;
-                stockedcheckbox.Enabled = true;
-                // Enable buttons
-                delete_button.Enabled = true;
-                savebutton.Enabled = true;
-                // Enable labels
-                label4.ForeColor = SystemColors.ControlText;
-                label5.ForeColor = SystemColors.ControlText;
-                label6.ForeColor = SystemColors.ControlText;
-                label7.ForeColor = SystemColors.ControlText;
-                dateedited.ForeColor = SystemColors.ControlText;
-
+                else
+                {
+                    MessageBox.Show("Serial num not found!.");
+                }
             }
         }
 
@@ -302,6 +415,9 @@ namespace The_Christie_NHS___Stock_control_program
 
                 // Clear selected catagories box
                 catagory_name_box.Text = "";
+
+                // Disable deselect button
+                deselectserialnumbutton.Enabled = false;
 
             }
         }
@@ -381,6 +497,12 @@ namespace The_Christie_NHS___Stock_control_program
 
             // Press select button
             selectcatagorybutton.PerformClick();
+
+            // Enable serialnumlistbox
+            serialnumlistbox.Enabled = true;
+
+            // Disable deselect button
+            deselectserialnumbutton.Enabled = false;
         }
 
         private void managestock_Load(object sender, EventArgs e)
@@ -438,6 +560,15 @@ namespace The_Christie_NHS___Stock_control_program
                 // Clear selected serial number box
                 selectedserialtextbox.Text = "";
 
+                // Enable serialnumlistbox
+                serialnumlistbox.Enabled = true;
+
+                // Press select category button
+                selectcatagorybutton.PerformClick();
+
+                // Disable deselect button
+                deselectserialnumbutton.Enabled = false;
+
             }
 
         }
@@ -450,6 +581,12 @@ namespace The_Christie_NHS___Stock_control_program
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void deselectserialnumbutton_Click(object sender, EventArgs e)
+        {
+            // Press select category button
+            selectcatagorybutton.PerformClick();
         }
     }
 }

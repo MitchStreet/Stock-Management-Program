@@ -131,52 +131,75 @@ namespace The_Christie_NHS___Stock_control_program
             // Acquire catagory .csv file name
             string selected_catagory = selectedcatagorybox.Text.Replace(" ", string.Empty);
 
-            // Assigned or stocked decider
-            string assignedorstocked;
-            // If assigned checkbox is checked, assignedorstocked = "Assigned"
-            if (assignedcheckBox.Checked)
+            // If serial number is already in .csv
+            if (File.ReadLines(@$"{directory_path}\{selected_catagory}.csv").Any(line => line.Contains(serialnumberbox.Text)))
             {
-                assignedorstocked = "Assigned";
-            }
-            // If stocked checkbox is checked, assignedorstocked = "Stocked"
-            else if (stockedcheckBox.Checked)
-            {
-                assignedorstocked = "Stocked";
-            }
-            // If neither are checked, assignedorstocked == ""
-            else
-            {
-                assignedorstocked = "";
-            }
+                // Error message
+                MessageBox.Show($"Serial number {serialnumberbox.Text.ToString()} already exists in database");
 
-            // Set variable 'dateandtime' to current date and time
-            string dateandtime = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-
-
-
-            // Append data to the .csv
-            System.IO.File.AppendAllText(@$"{directory_path}\{selected_catagory}.csv", serialnumberbox.Text + "," + assignedorstocked + "," + ticketnumberbox.Text + "," + ordernumberbox.Text + "," + commentbox.Text + "," + dateandtime + "," + Environment.NewLine);
-
-            // Set button text to "Stored" and coloured green
-            storebutton.Text = "Stored";
-            storebutton.ForeColor = Color.Green;
-
-            // Change stockedstatus label
-            stockedstatus.Text = (serialnumberbox.Text + " stocked.");
-
-            // Clear input boxes after submit
-            serialnumberbox.Text = "";
-            if (bulkmodecheckbox.Checked == false)
-            {
-                ticketnumberbox.Text = "";
-                ordernumberbox.Text = "";
-                commentbox.Text = "";
-                stockedcheckBox.Checked = false;
-                assignedcheckBox.Checked = false;
+                // Clear boxes
+                serialnumberbox.Text = "";
+                if (bulkmodecheckbox.Checked == false)
+                {
+                    ticketnumberbox.Text = "";
+                    ordernumberbox.Text = "";
+                    commentbox.Text = "";
+                }
+                else
+                {
+                    // Dont clear boxes
+                }
             }
             else
             {
-                
+                // serial number doesn't exist
+                // Assigned or stocked decider
+                string assignedorstocked;
+                // If assigned checkbox is checked, assignedorstocked = "Assigned"
+                if (assignedcheckBox.Checked)
+                {
+                    assignedorstocked = "Assigned";
+                }
+                // If stocked checkbox is checked, assignedorstocked = "Stocked"
+                else if (stockedcheckBox.Checked)
+                {
+                    assignedorstocked = "Stocked";
+                }
+                // If neither are checked, assignedorstocked == ""
+                else
+                {
+                    assignedorstocked = "";
+                }
+
+                // Set variable 'dateandtime' to current date and time
+                string dateandtime = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+
+
+
+                // Append data to the .csv
+                System.IO.File.AppendAllText(@$"{directory_path}\{selected_catagory}.csv", serialnumberbox.Text + "," + assignedorstocked + "," + ticketnumberbox.Text + "," + ordernumberbox.Text + "," + commentbox.Text + "," + dateandtime + "," + Environment.NewLine);
+
+                // Set button text to "Stored" and coloured green
+                storebutton.Text = "Stored";
+                storebutton.ForeColor = Color.Green;
+
+                // Change stockedstatus label
+                stockedstatus.Text = (serialnumberbox.Text + " stocked.");
+
+                // Clear input boxes after submit
+                serialnumberbox.Text = "";
+                if (bulkmodecheckbox.Checked == false)
+                {
+                    ticketnumberbox.Text = "";
+                    ordernumberbox.Text = "";
+                    commentbox.Text = "";
+                    stockedcheckBox.Checked = false;
+                    assignedcheckBox.Checked = false;
+                }
+                else
+                {
+
+                }
             }
         }
 
