@@ -332,7 +332,7 @@
             this.version_label.Name = "version_label";
             this.version_label.Size = new System.Drawing.Size(254, 43);
             this.version_label.TabIndex = 27;
-            this.version_label.Text = "Current version:\r\nv.1.0.2\r\n";
+            this.version_label.Text = "Current version:\r\nv.1.1.0\r\n";
             this.version_label.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.version_label.Click += new System.EventHandler(this.version_label_Click);
             // 
