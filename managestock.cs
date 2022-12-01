@@ -494,14 +494,9 @@ namespace The_Christie_NHS___Stock_control_program
                     MessageBox.Show("Ticket number is required.");
                     return;
                 }
-                else
-                {
-                    
-                }
+                else { }
             }
-            else
-            {
-            }
+            else { }
 
             // If stocked is checked, ticket number should be empty
             if (stockedcheckbox.Checked == true)
@@ -517,9 +512,16 @@ namespace The_Christie_NHS___Stock_control_program
 
                 }
             }
-            else
+            else { }
+
+            // Prevent saving if neither stockedcheckbox or assignedcheckbox is ticked
+            if (stockedcheckbox.Checked == false && assignedcheckbox.Checked == false)
             {
+                MessageBox.Show("Please select a status.");
+                return;
             }
+            else { }
+            
             // Save order number changes
             // Pull directory path from settings
             string directory_path;

@@ -82,11 +82,11 @@
             // scaninstock
             // 
             this.scaninstock.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.scaninstock.Location = new System.Drawing.Point(84, 203);
+            this.scaninstock.Location = new System.Drawing.Point(84, 195);
             this.scaninstock.Name = "scaninstock";
-            this.scaninstock.Size = new System.Drawing.Size(192, 45);
+            this.scaninstock.Size = new System.Drawing.Size(192, 61);
             this.scaninstock.TabIndex = 3;
-            this.scaninstock.Text = "Scan in stock";
+            this.scaninstock.Text = "Add stock or Categories";
             this.scaninstock.UseVisualStyleBackColor = true;
             this.scaninstock.Click += new System.EventHandler(this.scaninstock_Click);
             // 
